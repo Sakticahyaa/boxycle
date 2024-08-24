@@ -4,5 +4,5 @@ BoXycle merupakan aplikasi marketplace yang menawarkan penjualan _packaging_ ata
 
 ### Nama Kelompok: BoXycle <br />
 Ketua Kelompok: Sakti Cahya Buana <br />
-Anggota 1: <br />
-Anggota 2:
+Anggota 1: Nashatra Aqila Ramadhani-22/504580/TK/55195 <br />
+Anggota 2: 
