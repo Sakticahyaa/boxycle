@@ -6,5 +6,3 @@ BoXycle merupakan aplikasi marketplace yang menawarkan penjualan _packaging_ ata
 Ketua Kelompok:  <br />
 Anggota 1: <br />
 Anggota 2:
-
-lalala
