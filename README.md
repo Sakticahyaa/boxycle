@@ -2,6 +2,10 @@
 
 BoXycle merupakan aplikasi marketplace yang menawarkan penjualan _packaging_ atau _wrapping_ bekas yang sebelumnya digunakan untuk mengemas barang online yang dibeli pengguna. Dengan menjual _packaging_ dan _wrapping_, pengguna dapat mendapatkan uang dan berkontribusi pada ekonomi sirkular serta keberlanjutan. Nantinya, penjual barang online dapat membeli _packaging_ dan _wrapping_ dari Boxycle dengan harga lebih murah, sehingga biaya pengemasan yang dikeluarkan penjual barang online dapat dipangkas.
 
+### Class diagram
+![Boxycle diagram-Page-1 drawio](https://github.com/user-attachments/assets/f2f81ed8-07a4-415c-b733-b90635ee3b8d)
+
+
 ### Nama Kelompok: BoXycle <br />
 Ketua Kelompok: Sakti Cahya Buana - 22/503237/TK/54974 <br />
 Anggota 1: Nashatra Aqila Ramadhani - 22/504580/TK/55195 <br />
