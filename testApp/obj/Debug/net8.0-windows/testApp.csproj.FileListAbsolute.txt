@@ -1,0 +1,5 @@
+C:\Users\MSI\source\repos\Sakticahyaa\boxycle\testApp\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Users\MSI\source\repos\Sakticahyaa\boxycle\testApp\obj\Debug\net8.0-windows\Register.g.cs
+C:\Users\MSI\source\repos\Sakticahyaa\boxycle\testApp\obj\Debug\net8.0-windows\App.g.cs
+C:\Users\MSI\source\repos\Sakticahyaa\boxycle\testApp\obj\Debug\net8.0-windows\testApp_MarkupCompile.cache
+C:\Users\MSI\source\repos\Sakticahyaa\boxycle\testApp\obj\Debug\net8.0-windows\testApp_MarkupCompile.lref

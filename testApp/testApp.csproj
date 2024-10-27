@@ -8,4 +8,12 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="logo boxycle.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="logo boxycle.png" />
+  </ItemGroup>
+
 </Project>
