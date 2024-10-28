@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\MSI\\source\\repos\\Sakticahyaa\\boxycle\\testApp\\testApp.csproj": {}
+    "C:\\Users\\Nashatra\\Source\\Repos\\Sakticahyaa\\boxycle\\testApp\\testApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\MSI\\source\\repos\\Sakticahyaa\\boxycle\\testApp\\testApp.csproj": {
+    "C:\\Users\\Nashatra\\Source\\Repos\\Sakticahyaa\\boxycle\\testApp\\testApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\MSI\\source\\repos\\Sakticahyaa\\boxycle\\testApp\\testApp.csproj",
+        "projectUniqueName": "C:\\Users\\Nashatra\\Source\\Repos\\Sakticahyaa\\boxycle\\testApp\\testApp.csproj",
         "projectName": "testApp",
-        "projectPath": "C:\\Users\\MSI\\source\\repos\\Sakticahyaa\\boxycle\\testApp\\testApp.csproj",
-        "packagesPath": "C:\\Users\\MSI\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\MSI\\source\\repos\\Sakticahyaa\\boxycle\\testApp\\obj\\",
+        "projectPath": "C:\\Users\\Nashatra\\Source\\Repos\\Sakticahyaa\\boxycle\\testApp\\testApp.csproj",
+        "packagesPath": "C:\\Users\\Nashatra\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Nashatra\\Source\\Repos\\Sakticahyaa\\boxycle\\testApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\MSI\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Nashatra\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0-windows"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -63,7 +61,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.205/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
