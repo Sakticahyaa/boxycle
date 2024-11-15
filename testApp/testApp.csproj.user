@@ -2,12 +2,42 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup />
   <ItemGroup>
+    <Compile Update="CompleteUserData.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="ItemDescription.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MainProduct.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="RegisterAccount.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ShoppingCart.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="SignIn.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="CompleteUserData.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="ItemDescription.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainProduct.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="RegisterAccount.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ShoppingCart.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="SignIn.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

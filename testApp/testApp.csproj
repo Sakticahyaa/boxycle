@@ -32,6 +32,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Npgsql" Version="8.0.5" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="BOXYCLE.png" />
     <Resource Include="christopher-bill-3l19r5EOZaw-unsplash.jpg" />
     <Resource Include="Icon.png" />
