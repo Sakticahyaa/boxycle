@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Npgsql;
+using static System.Collections.Specialized.BitVector32;
 
 namespace testApp
 {
@@ -66,13 +67,31 @@ namespace testApp
                 cmd.Parameters.AddWithValue("Password", password);
 
                 int userExists = Convert.ToInt32(cmd.ExecuteScalar());
+                object result = cmd.ExecuteScalar();
 
                 if (userExists > 0)
                 {
+                    int userId = Convert.ToInt32(result);
                     MessageBox.Show("Sign in berhasil", "Success", MessageBoxButton.OK);
-                    // ke main page
-                    MainProduct mainProductPage = new MainProduct();
-                    MovetoAnotherPage(mainProductPage);
+
+                    string sqlrole = "SELECT \"roles\" FROM public.\"pengguna\" WHERE \"userid\" = @userid";
+                    NpgsqlCommand roleCmd = new NpgsqlCommand(sqlrole, conn);
+                    roleCmd.Parameters.AddWithValue("userid", userId);
+
+                    bool roles = Convert.ToBoolean(roleCmd.ExecuteScalar());
+
+                    if (roles)
+                    {
+                        // Navigate to MainProduct page
+                        MainProduct mainProductPage = new MainProduct();
+                        MovetoAnotherPage(mainProductPage);
+                    }
+                    else
+                    {
+                        // Navigate to MainProduct_penjual page
+                        MainProduct_Penjual mainProductPenjualPage = new MainProduct_Penjual();
+                        MovetoAnotherPage(mainProductPenjualPage);
+                    }
 
                 }
                 else

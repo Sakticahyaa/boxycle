@@ -8,7 +8,13 @@
     <Compile Update="ItemDescription.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="ItemDescription_Penjual.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="MainProduct.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MainProduct_Penjual.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="RegisterAccount.xaml.cs">
@@ -28,7 +34,13 @@
     <Page Update="ItemDescription.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="ItemDescription_Penjual.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="MainProduct.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainProduct_Penjual.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="RegisterAccount.xaml">

@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\BoXycle"
+    "\\BoXycle",
+    "\\testApp"
   ],
-  "SelectedNode": "\\BoXycle\\Pembelian.cs",
+  "SelectedNode": "\\testApp.sln",
   "PreviewInSolutionExplorer": false
 }
