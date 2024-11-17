@@ -15,16 +15,16 @@ using System.Windows.Shapes;
 namespace testApp
 {
     /// <summary>
-    /// Interaction logic for ShoppingCart.xaml
+    /// Interaction logic for SalesCart.xaml
     /// </summary>
-    public partial class ShoppingCart : Window
+    public partial class SalesCart : Window
     {
         private string _namaProduk;
-        private string _hargaProduk;
         private string _deskripsiProduk;
         private BitmapImage _productImage;
         private int _limbahId;
-        public ShoppingCart(string namaProduk, string hargaProduk, int jumlahProduk, BitmapImage productImage, int limbahId)
+
+        public SalesCart(string namaProduk, int jumlahProduk, BitmapImage productImage, int limbahId)
         {
             InitializeComponent();
 
@@ -37,22 +37,9 @@ namespace testApp
             this.Height = 475;
             #endif
 
-            decimal harga;
-            if (!decimal.TryParse(hargaProduk, out harga))
-            {
-                MessageBox.Show("Harga produk tidak valid");
-                return;
-            }
-
-            decimal subtotal = harga * jumlahProduk;
-            TextBlockSubtotal.Text = subtotal.ToString();
-
             TextBlockNamaProduk.Text = namaProduk;
-            TextBlockHargaProduk.Text = hargaProduk.ToString();
             TextBlockJumlahItem.Text = jumlahProduk.ToString();
             ImageProduk.Source = productImage;
-
-
         }
 
         public bool ShowBorder { get; set; }
@@ -79,25 +66,28 @@ namespace testApp
                 BlmAdaBarang.Visibility = Visibility.Visible;
             }
         }
-
         private void MovetoAnotherPage(Window newWindow)
         {
             this.Close();
             newWindow.Show();
         }
 
-        private void Mulai_Berbelanja_Click(object sender, RoutedEventArgs e)
+        private void BackButton3_Click(object sender, RoutedEventArgs e)
         {
-            MainProduct mainProductPage = new MainProduct();
-            MovetoAnotherPage(mainProductPage);
+            MainProduct_Penjual mainProductPenjualPage = new MainProduct_Penjual();
+            MovetoAnotherPage(mainProductPenjualPage);
         }
 
-        private void BackButton2_Click(object sender, RoutedEventArgs e)
+        private void Mulai_BerjualanClick(object sender, RoutedEventArgs e)
         {
-            MainProduct mainProductPage = new MainProduct();
-            MovetoAnotherPage(mainProductPage);
+            MainProduct_Penjual mainProductPenjualPage = new MainProduct_Penjual();
+            MovetoAnotherPage(mainProductPenjualPage);
         }
 
-        
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            OpsiPengantaran opsiPengantaaranPage = new OpsiPengantaran();
+            MovetoAnotherPage(opsiPengantaaranPage);
+        }
     }
 }

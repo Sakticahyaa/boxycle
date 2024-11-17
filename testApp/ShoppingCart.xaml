@@ -10,7 +10,9 @@
         <Grid Background="#FF065C68" Height="69" VerticalAlignment="Top" HorizontalAlignment="Center" Width="800">
             <Image x:Name="Bell" Margin="698,17,71,16" Source="/MdNotifications.png"/>
             <Image x:Name="Profile" Margin="746,16,17,16" Source="/Vector.png" RenderTransformOrigin="1.192,-3.215"/>
-            <Image x:Name="Logo" Margin="19,8,567,8" Source="/BOXYCLE.png"/>
+            <Image x:Name="Logo" Height="53" Margin="45,0,541,0" VerticalAlignment="Center" Source="/BOXYCLE.png"/>
+            <Image HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="28" Margin="7,18,0,0" Source="/Arrow left.png"/>
+            <Button x:Name="BackButton2" Content="" HorizontalAlignment="Left" Margin="7,0,0,0" VerticalAlignment="Center"  Background="#00DDDDDD" BorderBrush="{x:Null}" Width="26" Height="26" Click="BackButton2_Click"/>
             <Border CornerRadius="15" Background="#d9d9d9" Padding="5,0" Margin="321,17,127,23">
                 <Grid>
                     <!-- Placeholder Text dalam TextBox -->

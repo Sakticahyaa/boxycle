@@ -70,13 +70,53 @@ namespace testApp
             TextBlockJumlahProduk.Text = jumlahBarang.ToString();
         }
 
-        private void MovetoShoppingCart(Window newWindow)
-        {
-            this.Close();
-            newWindow.Show();
-        }
 
         private void PilihProduk_Click(object sender, RoutedEventArgs e)
+        {
+            MainProduct_Penjual mainProductPenjualPage = new MainProduct_Penjual();
+            MovetoAnotherPage(mainProductPenjualPage);
+        }
+
+        private void BtnJual_Click(object sender, RoutedEventArgs e)
+        {
+            string namaProduk = TextBlockNamaProduk.Text;
+            int jumlahProduk = jumlahBarang;
+            BitmapImage productImage = ImageKemasan.Source as BitmapImage;
+            int limbahId = _limbahId;
+
+            SalesCart salesCart = new SalesCart(namaProduk, jumlahProduk, productImage, limbahId);
+            if (jumlahBarang != 0)
+            {
+                salesCart.ShowBorder = true;
+                MovetoAnotherPage(salesCart);
+            }
+            else
+            {
+                salesCart.ShowBorder = false;
+                MessageBox.Show("Tambah jumlah kemasan yang ingin dijual", "Tidak Ada Kemasan", MessageBoxButton.OK);
+            }
+        }
+
+        private void BtnToSalesCart_Click(object sender, RoutedEventArgs e)
+        {
+            string namaProduk = TextBlockNamaProduk.Text;
+            int jumlahProduk = jumlahBarang;
+            BitmapImage productImage = ImageKemasan.Source as BitmapImage;
+            int limbahId = _limbahId;
+
+            SalesCart salesCart = new SalesCart(namaProduk, jumlahProduk, productImage, limbahId);
+            if (jumlahBarang != 0)
+            {
+                salesCart.ShowBorder = true;
+            }
+            else
+            {
+                salesCart.ShowBorder = false;
+            }
+            MovetoAnotherPage(salesCart);
+        }
+
+        private void BackButton2_Click(object sender, RoutedEventArgs e)
         {
             MainProduct_Penjual mainProductPenjualPage = new MainProduct_Penjual();
             MovetoAnotherPage(mainProductPenjualPage);

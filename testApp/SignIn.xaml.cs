@@ -38,6 +38,11 @@ namespace testApp
             newWindow.Show();
         }
 
+        public static class Session
+        {
+            public static int? UserId { get; set; }
+        }
+
         // Connect to Postgre
 
         private NpgsqlConnection conn;
@@ -60,43 +65,44 @@ namespace testApp
                 conn = new NpgsqlConnection(connstring);
                 conn.Open();
 
-                sql = "SELECT COUNT(1) FROM public.\"pengguna\" WHERE \"email\" = @email AND \"password\" = @password";
+                // Query to check if email and password exist in the database
+                sql = "SELECT \"userid\", \"roles\" FROM public.\"pengguna\" WHERE \"email\" = @Email AND \"password\" = @Password";
                 cmd = new NpgsqlCommand(sql, conn);
 
+                // Use parameters to prevent SQL injection
                 cmd.Parameters.AddWithValue("Email", email);
                 cmd.Parameters.AddWithValue("Password", password);
 
-                int userExists = Convert.ToInt32(cmd.ExecuteScalar());
-                object result = cmd.ExecuteScalar();
-
-                if (userExists > 0)
+                // Execute the query
+                using (NpgsqlDataReader reader = cmd.ExecuteReader())
                 {
-                    int userId = Convert.ToInt32(result);
-                    MessageBox.Show("Sign in berhasil", "Success", MessageBoxButton.OK);
-
-                    string sqlrole = "SELECT \"roles\" FROM public.\"pengguna\" WHERE \"userid\" = @userid";
-                    NpgsqlCommand roleCmd = new NpgsqlCommand(sqlrole, conn);
-                    roleCmd.Parameters.AddWithValue("userid", userId);
-
-                    bool roles = Convert.ToBoolean(roleCmd.ExecuteScalar());
-
-                    if (roles)
+                    if (reader.Read()) // Check if the query returns a result
                     {
-                        // Navigate to MainProduct page
-                        MainProduct mainProductPage = new MainProduct();
-                        MovetoAnotherPage(mainProductPage);
+                        // Retrieve userId and roles
+                        int userId = reader.GetInt32(0);
+                        bool roles = reader.GetBoolean(1);
+
+                        // Save the userId in the session
+                        Session.UserId = userId;
+
+                        MessageBox.Show("Sign in berhasil", "Success", MessageBoxButton.OK);
+
+                        // Navigate based on the roles value
+                        if (roles) // If roles is true
+                        {
+                            MainProduct mainProductPage = new MainProduct();
+                            MovetoAnotherPage(mainProductPage);
+                        }
+                        else // If roles is false
+                        {
+                            MainProduct_Penjual mainProductPenjualPage = new MainProduct_Penjual();
+                            MovetoAnotherPage(mainProductPenjualPage);
+                        }
                     }
                     else
                     {
-                        // Navigate to MainProduct_penjual page
-                        MainProduct_Penjual mainProductPenjualPage = new MainProduct_Penjual();
-                        MovetoAnotherPage(mainProductPenjualPage);
+                        MessageBox.Show("Email atau Password salah. Tolong coba lagi", "Sign in Failed", MessageBoxButton.OK);
                     }
-
-                }
-                else
-                {
-                    MessageBox.Show("Email atau Password salah. Tolong coba lagi", "Sign in Failed", MessageBoxButton.OK);
                 }
             }
             catch (Exception ex)

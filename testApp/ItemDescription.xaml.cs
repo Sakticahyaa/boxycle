@@ -22,8 +22,9 @@ namespace testApp
     public partial class ItemDescription : Window
     {
         int jumlahBarang = 0;
+        int _limbahId;
 
-        public ItemDescription(string namaProduk, string harga, string deskripsi, BitmapImage productImage)
+        public ItemDescription(string namaProduk, string harga, string deskripsi, BitmapImage productImage, int limbahId)
         {
             InitializeComponent();
 
@@ -40,6 +41,8 @@ namespace testApp
             TextBlockHarga.Text = harga.ToString();
             TextBlockDeskripsiProduk.Text = deskripsi;
             ImageKemasan.Source = productImage;
+            TextBlockLimbahId.Text = limbahId.ToString();
+            _limbahId = limbahId;
         }
 
         private void MovetoAnotherPage(Window newWindow)
@@ -82,7 +85,9 @@ namespace testApp
             string hargaProduk = TextBlockHarga.Text;
             int jumlahProduk = jumlahBarang;
             BitmapImage productImage = ImageKemasan.Source as BitmapImage;
-            ShoppingCart shoppingCart = new ShoppingCart(namaProduk, hargaProduk, jumlahProduk, productImage);
+            int limbahId = _limbahId;
+
+            ShoppingCart shoppingCart = new ShoppingCart(namaProduk, hargaProduk, jumlahProduk, productImage, limbahId);
             if (jumlahBarang != 0)
             {
                 shoppingCart.ShowBorder = true;
@@ -91,12 +96,27 @@ namespace testApp
             {
                 shoppingCart.ShowBorder = false;
             }
-            MovetoShoppingChart(shoppingCart);
+            MovetoAnotherPage(shoppingCart);
         }
 
         private void BtnKeranjang_Click(object sender, RoutedEventArgs e)
         {
-            // ini ntar dibalikin ke halaman yang banyak produk, tapi datanya dimasukin ke database.
+            string namaProduk = TextBlockNamaProduk.Text;
+            string hargaProduk = TextBlockHarga.Text;
+            int jumlahProduk = jumlahBarang;
+            BitmapImage productImage = ImageKemasan.Source as BitmapImage;
+            int limbahId = _limbahId;
+
+            ShoppingCart shoppingCart = new ShoppingCart(namaProduk, hargaProduk, jumlahProduk, productImage, limbahId);
+            if (jumlahBarang != 0)
+            {
+                shoppingCart.ShowBorder = true;
+            }
+            else
+            {
+                shoppingCart.ShowBorder = false;
+            }
+            MovetoAnotherPage(shoppingCart);
         }
 
         private void Mulai_Berbelanja_Click(object sender, RoutedEventArgs e)
@@ -105,9 +125,6 @@ namespace testApp
             MovetoAnotherPage(mainProductPage);
         }
 
-        private void BtnBeliLangsung_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
+        
     }
 }

@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Arrow left.png" />
     <None Remove="BOXYCLE.png" />
     <None Remove="christopher-bill-3l19r5EOZaw-unsplash.jpg" />
     <None Remove="Icon.png" />
@@ -36,6 +37,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Arrow left.png" />
     <Resource Include="BOXYCLE.png" />
     <Resource Include="christopher-bill-3l19r5EOZaw-unsplash.jpg" />
     <Resource Include="Icon.png" />

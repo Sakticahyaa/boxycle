@@ -10,7 +10,6 @@
         <Grid Background="#FF6DACB0" Height="69" VerticalAlignment="Top" HorizontalAlignment="Center" Width="800">
             <Image x:Name="Bell" Margin="698,17,0,0" Source="/MdNotifications.png" HorizontalAlignment="Left" Width="31" Height="36" VerticalAlignment="Top"/>
             <Image x:Name="Profile" Margin="746,16,0,0" Source="/Vector.png" RenderTransformOrigin="1.192,-3.215" HorizontalAlignment="Left" Width="37" Height="37" VerticalAlignment="Top"/>
-            <Image x:Name="Logo" Height="53" Margin="19,0,567,0" VerticalAlignment="Center" Source="/BOXYCLE.png"/>
             <Border CornerRadius="15" Background="#d9d9d9" Padding="5,0" Margin="321,17,127,23" BorderBrush="Black" BorderThickness="1">
                 <Grid>
                     <!-- Placeholder Text dalam TextBox -->
@@ -21,6 +20,9 @@
 
                 </Grid>
             </Border>
+            <Image x:Name="Logo" Height="53" Margin="45,0,541,0" VerticalAlignment="Center" Source="/BOXYCLE.png"/>
+            <Image HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="28" Margin="7,18,0,0" Source="/Arrow left.png"/>
+            <Button x:Name="BackButton2" Content="" HorizontalAlignment="Left" Margin="7,0,0,0" VerticalAlignment="Center"  Background="#00DDDDDD" BorderBrush="{x:Null}" Width="26" Height="26" Click="BackButton2_Click"/>
         </Grid>
         <Grid Margin="0,69,0,0" Background="#FFD9D9D9">
             <Border CornerRadius="15" BorderBrush="Black" BorderThickness="1" Margin="419,52,89,0" Height="151" VerticalAlignment="Top">
@@ -48,11 +50,11 @@
             </Border>
             <Image x:Name="ImageKemasan" HorizontalAlignment="Left" Height="200" Margin="97,60,0,0" VerticalAlignment="Top" Width="200" RenderTransformOrigin="-0.553,0.225"/>
             <Border BorderBrush="Black" BorderThickness="1" Margin="518,231,0,0" CornerRadius="15" Background="#FF6DACB0" HorizontalAlignment="Left" Width="94" Height="31" VerticalAlignment="Top">
-                <Button x:Name="BtnJual" Content="+ Jual" Background="{x:Null}" BorderThickness="0" Foreground="White" Margin="-1,0,-1,-1"/>
+                <Button x:Name="BtnJual" Content="+ Jual" Background="{x:Null}" BorderThickness="0" Foreground="White" Margin="-1,0,-1,-1" Click="BtnJual_Click"/>
             </Border>
             <Border CornerRadius="15" Background="#ff6DACB0" BorderBrush="#ff6DACB0" BorderThickness="1" Margin="23,308,15,12">
                 <Grid Margin="0,0,-1,-1">
-                    <Button x:Name="BtnToShoppingCart" Background="Transparent" BorderBrush="#00707070"/>
+                    <Button x:Name="BtnToSalesCart" Background="Transparent" BorderBrush="#00707070" Click="BtnToSalesCart_Click"/>
                     <Label x:Name="LabelCheckOut" Content="Check Out" Background="{x:Null}" FontSize="20" FontWeight="Bold" Margin="10,2,0,5" Foreground="White" HorizontalAlignment="Left" Width="107"/>
                     <Image x:Name="ImgKeranjang" Height="25" Margin="686,0,50,0" VerticalAlignment="Center" Source="/Shopping cart.png" RenderTransformOrigin="0.573,0.549"/>
                     <Image x:Name="ImgNext" Source="/Icon.png" Margin="720,6,9,10"/>

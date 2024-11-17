@@ -248,8 +248,18 @@ namespace testApp
             }
         }
 
+        private int GetLimbahIdForClickedItem(object sender)
+        {
+            // Logic to get limbahid based on sender (e.g., Button or UI control that triggered the event)
+            // This might involve setting limbahid as a Tag on each Button or control representing an item
+
+            Button clickedButton = sender as Button;
+            return clickedButton != null && clickedButton.Tag is int ? (int)clickedButton.Tag : 0;
+        }
+
         public void BtnItem1_Click(object sender, RoutedEventArgs e)
         {
+            int limbahId = GetLimbahIdForClickedItem(sender);
             string namaProduk = TBItem1.Text;
             string harga = TBHargaItem1.Text;
             string deskripsi = GetProductDescription(1);
@@ -264,6 +274,7 @@ namespace testApp
 
         public void BtnItem2_Click(object sender, RoutedEventArgs e)
         {
+            int limbahId = GetLimbahIdForClickedItem(sender);
             string namaProduk = TBItem2.Text;
             string harga = TBHargaItem2.Text;
             string deskripsi = GetProductDescription(2);
