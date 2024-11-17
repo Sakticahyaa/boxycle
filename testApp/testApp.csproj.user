@@ -2,6 +2,9 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup />
   <ItemGroup>
+    <Compile Update="AlamatPengiriman.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="CompleteUserData.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -15,6 +18,12 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="MainProduct_Penjual.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="OpsiPengantaran.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="PesananDiproses.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="RegisterAccount.xaml.cs">
@@ -31,6 +40,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="AlamatPengiriman.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="CompleteUserData.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -44,6 +56,12 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainProduct_Penjual.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="OpsiPengantaran.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="PesananDiproses.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="RegisterAccount.xaml">

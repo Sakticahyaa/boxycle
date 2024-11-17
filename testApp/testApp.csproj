@@ -11,6 +11,7 @@
   <ItemGroup>
     <None Remove="Arrow left.png" />
     <None Remove="BOXYCLE.png" />
+    <None Remove="Chevron right %281%29.png" />
     <None Remove="christopher-bill-3l19r5EOZaw-unsplash.jpg" />
     <None Remove="Icon.png" />
     <None Remove="image 10.png" />
@@ -26,6 +27,7 @@
     <None Remove="MdNotifications.png" />
     <None Remove="Minus.png" />
     <None Remove="mockup-free-nbp_u-OemuE-unsplash.jpg" />
+    <None Remove="PesananDiprosesIMG.png" />
     <None Remove="Plus.png" />
     <None Remove="SearchIcon.png" />
     <None Remove="Shopping cart.png" />
@@ -39,6 +41,7 @@
   <ItemGroup>
     <Resource Include="Arrow left.png" />
     <Resource Include="BOXYCLE.png" />
+    <Resource Include="Chevron right (1).png" />
     <Resource Include="christopher-bill-3l19r5EOZaw-unsplash.jpg" />
     <Resource Include="Icon.png" />
     <Resource Include="image 10.png" />
@@ -54,6 +57,7 @@
     <Resource Include="MdNotifications.png" />
     <Resource Include="Minus.png" />
     <Resource Include="mockup-free-nbp_u-OemuE-unsplash.jpg" />
+    <Resource Include="PesananDiprosesIMG.png" />
     <Resource Include="Plus.png" />
     <Resource Include="SearchIcon.png" />
     <Resource Include="Shopping cart.png" />
