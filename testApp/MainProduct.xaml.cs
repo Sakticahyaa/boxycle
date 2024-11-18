@@ -36,7 +36,7 @@ namespace testApp
 
         // Connect to Postgre
         private NpgsqlConnection conn;
-        string connstring = "";
+        string connstring = "Host=conqueror.postgres.database.azure.com;Port=5432;Username=postgres;Password=Boxycle2;Database=Boxycle";
         public DataTable dt;
         public static NpgsqlCommand cmd;
 
@@ -266,7 +266,7 @@ namespace testApp
             BitmapImage productImage = ImgItem1.Source as BitmapImage;
 
 
-            ItemDescription itemDescriptionPage = new ItemDescription(namaProduk, harga, deskripsi, productImage);
+            ItemDescription itemDescriptionPage = new ItemDescription(namaProduk, harga, deskripsi, productImage, limbahId);
             MovetoAnotherPage(itemDescriptionPage);
 
 
@@ -280,7 +280,7 @@ namespace testApp
             string deskripsi = GetProductDescription(2);
             BitmapImage productImage = ImgItem2.Source as BitmapImage;
 
-            ItemDescription itemDescriptionPage = new ItemDescription(namaProduk, harga, deskripsi, productImage);
+            ItemDescription itemDescriptionPage = new ItemDescription(namaProduk, harga, deskripsi, productImage, limbahId);
             MovetoAnotherPage(itemDescriptionPage);
         }
     }

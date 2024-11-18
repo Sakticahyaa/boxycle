@@ -34,7 +34,7 @@ namespace testApp
 
         // Connect to Postgre
         private NpgsqlConnection conn;
-        string connstring = "";
+        string connstring = "Host=conqueror.postgres.database.azure.com;Port=5432;Username=postgres;Password=Boxycle2;Database=Boxycle";
         public DataTable dt;
         public static NpgsqlCommand cmd;
 

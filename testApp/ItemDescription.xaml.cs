@@ -125,6 +125,10 @@ namespace testApp
             MovetoAnotherPage(mainProductPage);
         }
 
-        
+        private void BackButton2_Click(object sender, RoutedEventArgs e)
+        {
+            MainProduct mainProductPage = new MainProduct();
+            MovetoAnotherPage(mainProductPage);
+        }
     }
 }
