@@ -24,24 +24,24 @@
                 </Border>
                 <Border x:Name="Border1" BorderBrush="Black" BorderThickness="1" Margin="66,45,66,65" CornerRadius="10" Background="White">
                     <Grid Margin="0,0,-1,-1">
-                        <TextBlock x:Name="TextBlockAlamat" Margin="36,32,522,0" TextWrapping="Wrap" Text="Alamat" FontSize="16" Foreground="#FF065C68" FontWeight="Bold" Height="21" VerticalAlignment="Top"/>
-                        <Border BorderBrush="Black" BorderThickness="1" Margin="207,28,34,0" CornerRadius="10" Height="42" VerticalAlignment="Top">
-                            <TextBox x:Name="AlamatTextBox" TextWrapping="Wrap" Background="Transparent" BorderBrush="Transparent" Margin="4,3,4,3" x:FieldModifier="public"/>
+                        <Border BorderBrush="Black" BorderThickness="1" Margin="207,40,34,0" CornerRadius="10" Height="25" VerticalAlignment="Top" Width="426">
+                            <TextBox x:Name="JalanTextBox" TextWrapping="Wrap" Background="Transparent" BorderBrush="Transparent" Margin="4,3,4,3" x:FieldModifier="public" />
                         </Border>
-                        <TextBlock x:Name="TextBlockProvinsi" Margin="36,87,522,0" TextWrapping="Wrap" Text="Provinsi" FontSize="16" Foreground="#FF065C68" FontWeight="Bold" Height="21" VerticalAlignment="Top"/>
-                        <TextBlock x:Name="TextBlockKota" Margin="36,123,501,0" TextWrapping="Wrap" Text="Kabupaten/Kota" FontSize="16" Foreground="#FF065C68" FontWeight="Bold" Height="21" VerticalAlignment="Top"/>
-                        <Border BorderBrush="Black" BorderThickness="1" Margin="207,160,34,0" CornerRadius="10" Height="25" VerticalAlignment="Top">
-                            <TextBox x:Name="KecamatanTextBox" TextWrapping="Wrap" Background="Transparent" BorderBrush="Transparent" Margin="4,3,4,3" x:FieldModifier="public"/>
+                        <TextBlock x:Name="TextBlockProvinsi" Margin="36,155,521,0" TextWrapping="Wrap" Text="Provinsi" FontSize="16" Foreground="#FF065C68" FontWeight="Bold" Height="21" VerticalAlignment="Top"/>
+                        <TextBlock x:Name="TextBlockKota" Margin="36,0,501,0" TextWrapping="Wrap" Text="Kabupaten/Kota" FontSize="16" Foreground="#FF065C68" FontWeight="Bold" Height="21" VerticalAlignment="Center"/>
+                        <Border BorderBrush="Black" BorderThickness="1" Margin="207,77,34,0" CornerRadius="10" Height="25" VerticalAlignment="Top">
+                            <TextBox x:Name="KecamatanTextBox" TextWrapping="Wrap" Background="Transparent" BorderBrush="Transparent" Margin="4,3,4,3" x:FieldModifier="public" />
                         </Border>
                         <Border BorderBrush="Black" BorderThickness="1" Margin="207,197,34,0" CornerRadius="10" Height="25" VerticalAlignment="Top">
                             <TextBox x:Name="KodePosTextBox" TextWrapping="Wrap" Background="Transparent" BorderBrush="Transparent" Margin="4,3,4,3" x:FieldModifier="public"/>
                         </Border>
-                        <TextBlock x:Name="TextBlockKecamatan" Margin="36,164,501,0" TextWrapping="Wrap" Text="Kecamatan" FontSize="16" Foreground="#FF065C68" FontWeight="Bold" Height="21" VerticalAlignment="Top"/>
+                        <TextBlock x:Name="TextBlockKecamatan" Margin="36,80,501,0" TextWrapping="Wrap" Text="Kecamatan" FontSize="16" Foreground="#FF065C68" FontWeight="Bold" Height="21" VerticalAlignment="Top"/>
                         <TextBlock x:Name="TextBlockKodePos" Margin="36,201,501,0" TextWrapping="Wrap" Text="Kode Pos" FontSize="16" Foreground="#FF065C68" FontWeight="Bold" Height="21" VerticalAlignment="Top"/>
-                        <Border BorderBrush="Black" BorderThickness="1" Margin="207,119,34,0" CornerRadius="10" Height="25" VerticalAlignment="Top">
+                        <TextBlock x:Name="TextBlockJalan" Margin="36,42,522,0" TextWrapping="Wrap" Text="Jalan" FontSize="16" Foreground="#FF065C68" FontWeight="Bold" Height="21" VerticalAlignment="Top"/>
+                        <Border BorderBrush="Black" BorderThickness="1" Margin="207,0,34,0" CornerRadius="10" Height="25" VerticalAlignment="Center">
                             <TextBox x:Name="KabupatenTextBox" TextWrapping="Wrap" Background="Transparent" BorderBrush="Transparent" Margin="4,3,4,3" x:FieldModifier="public"/>
                         </Border>
-                        <Border BorderBrush="Black" BorderThickness="1" Margin="207,83,34,0" CornerRadius="10" Height="25" VerticalAlignment="Top">
+                        <Border BorderBrush="Black" BorderThickness="1" Margin="207,153,34,0" CornerRadius="10" Height="25" VerticalAlignment="Top">
                             <TextBox x:Name="ProvinsiTextBox" TextWrapping="Wrap" Background="Transparent" BorderBrush="Transparent" Margin="4,3,4,3" x:FieldModifier="public"/>
                         </Border>
                     </Grid>

@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Npgsql;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -32,10 +34,10 @@ namespace testApp
             _productImage = productImage;
             _limbahId = limbahId;
 
-            #if DEBUG
+#if DEBUG
             this.Width = 813;
             this.Height = 475;
-            #endif
+#endif
 
             decimal harga;
             if (!decimal.TryParse(hargaProduk, out harga))
@@ -98,6 +100,10 @@ namespace testApp
             MovetoAnotherPage(mainProductPage);
         }
 
-        
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            OpsiPengantaran opsiPengantaran = new OpsiPengantaran();
+            MovetoAnotherPage(opsiPengantaran);
+        }
     }
 }
