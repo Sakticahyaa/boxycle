@@ -38,7 +38,7 @@ namespace testApp
 
         // Connect to Postgre
         private NpgsqlConnection conn;
-        string connstring = "";
+        string connstring = "Host=conqueror.postgres.database.azure.com;Port=5432;Username=postgres;Password=Boxycle2;Database=Boxycle";
         public DataTable dt;
         public static NpgsqlCommand cmd;
         private string inputdata = null;
@@ -68,9 +68,16 @@ namespace testApp
                 if (rowsAffected > 0)
                 {
                     MessageBox.Show("Data Pengguna Berhasil Tersimpan", "Success", MessageBoxButton.OK);
-
-                    MainProduct mainProductPage = new MainProduct();
-                    OpenAnotherPage(mainProductPage);
+                    if(RbPembeli.IsChecked == true)
+                    {
+                        MainProduct mainProductPage = new MainProduct();
+                        OpenAnotherPage(mainProductPage);
+                    }
+                    else
+                    {
+                        MainProduct_Penjual mainProductPenjual = new MainProduct_Penjual();
+                        OpenAnotherPage(mainProductPenjual);
+                    }
                 }
                 else
                 {
