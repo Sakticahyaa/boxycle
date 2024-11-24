@@ -40,7 +40,7 @@
             </Border>
             <Border CornerRadius="15" Background="#ff065c68" BorderBrush="#ff065c68" BorderThickness="1" Margin="23,308,0,0" HorizontalAlignment="Left" Width="762" Height="44" VerticalAlignment="Top">
                 <Grid Margin="0,0,-1,-1">
-                    <Button Background="Transparent" BorderBrush="#00707070"/>
+                    <Button Background="Transparent" BorderBrush="#00707070" Click="Button_Click"/>
                     <Image x:Name="ImgKeranjang" Margin="687,9,49,9" Source="/Shopping cart.png"  Height="25" RenderTransformOrigin="0.573,0.549"/>
                     <Image x:Name="ImgNext" Source="/Icon.png" Margin="720,6,9,9"/>
                     <Label x:Name="LabelCheckOut" Content="Check Out" Background="{x:Null}" FontSize="20" FontWeight="Bold" Margin="10,4,644,3" Foreground="White"/>

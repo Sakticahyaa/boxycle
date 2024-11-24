@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Npgsql;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -35,8 +37,69 @@ namespace testApp
             newWindow.Show();
         }
 
+        // Connect to Postgre
+        private NpgsqlConnection conn;
+        string connstring = "Host=conqueror.postgres.database.azure.com;Port=5432;Username=postgres;Password=Boxycle2;Database=Boxycle";
+        public DataTable dt;
+        public static NpgsqlCommand cmd;
+        private string inputdata = null;
+
         private void BtnSimpanAlamat_Click(object sender, RoutedEventArgs e)
         {
+            string jalan = JalanTextBox.Text;
+            string kecamatan = KecamatanTextBox.Text;
+            string kabupaten = KabupatenTextBox.Text;
+            string provinsi = ProvinsiTextBox.Text;
+            int kodepos;
+
+            try
+            {
+                if (!int.TryParse(KodePosTextBox.Text, out kodepos))
+                {
+                    MessageBox.Show("Kode pos harus berupa angka. Silakan periksa kembali.", "Error", MessageBoxButton.OK);
+                    return;
+                }
+
+                conn = new NpgsqlConnection(connstring);
+                conn.Open();
+
+                // Update the "alamat" table with the shipping address
+                inputdata = "UPDATE public.\"alamat\" " +
+                    "SET \"jalan\" = @jalan, \"kabupaten_kota\" = @kabupaten, \"provinsi\" = @provinsi, \"kode_pos\" = @kodepos " +
+                    "WHERE \"userid\" = @userid";
+                cmd = new NpgsqlCommand(inputdata, conn);
+
+                // Use parameters to prevent SQL injection
+                cmd.Parameters.AddWithValue("jalan", jalan);
+                cmd.Parameters.AddWithValue("kabupaten", kabupaten);
+                cmd.Parameters.AddWithValue("provinsi", provinsi);
+                cmd.Parameters.AddWithValue("kodepos", kodepos);
+
+                // Execute the update command
+                int rowsAffected = cmd.ExecuteNonQuery();
+
+                if (rowsAffected > 0)
+                {
+                    MessageBox.Show("Alamat Pengiriman Berhasil Tersimpan", "Success", MessageBoxButton.OK);
+
+                    // Navigate to the next page, e.g., MainProduct
+                    MainProduct mainProductPage = new MainProduct();
+                    MovetoAnotherPage(mainProductPage);
+                }
+                else
+                {
+                    MessageBox.Show("Penyimpanan alamat gagal. Silakan coba lagi", "Error", MessageBoxButton.OK);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButton.OK);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
             PesananDiproses pesananDiprosesPage = new PesananDiproses();
             MovetoAnotherPage(pesananDiprosesPage);
         }
@@ -46,5 +109,7 @@ namespace testApp
             OpsiPengantaran opsiPengantaranPage = new OpsiPengantaran();
             MovetoAnotherPage(opsiPengantaranPage);
         }
+
+
     }
 }

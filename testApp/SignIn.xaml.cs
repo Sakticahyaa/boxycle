@@ -122,11 +122,7 @@ namespace testApp
             MovetoAnotherPage(registerAccountPage);
         }
 
-        private void LangsungkeMainPage_Click(object sender, RoutedEventArgs e)
-        {
-            MainProduct mainProductPage = new MainProduct();
-            MovetoAnotherPage(mainProductPage);
-        }
+        
     }
 
     

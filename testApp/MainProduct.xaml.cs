@@ -206,16 +206,6 @@ namespace testApp
             return bitmap;
         }
 
-        private void ImgItem1_Loaded(object sender, RoutedEventArgs e)
-        {
-            LoadImage(1, ImgItem1); 
-        }
-
-        private void ImgItem2_Loaded(object sender, RoutedEventArgs e)
-        {
-            LoadImage(2, ImgItem2); 
-        }
-
         public void LoadImage(int limbahId, Image imgControl)
         {
             BitmapImage bitmapImage = null;
@@ -247,6 +237,18 @@ namespace testApp
                 conn.Close();
             }
         }
+
+        private void ImgItem1_Loaded(object sender, RoutedEventArgs e)
+        {
+            LoadImage(1, ImgItem1);
+        }
+
+        private void ImgItem2_Loaded(object sender, RoutedEventArgs e)
+        {
+            LoadImage(2, ImgItem2); 
+        }
+
+        
 
         private int GetLimbahIdForClickedItem(object sender)
         {
