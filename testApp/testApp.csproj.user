@@ -1,10 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <_LastSelectedProfileId>C:\Users\Nashatra\Source\Repos\Sakticahyaa\boxycle\testApp\Properties\PublishProfiles\FolderProfile.pubxml</_LastSelectedProfileId>
+    <_LastSelectedProfileId>C:\Outpost\finalBoxycle\testApp\Properties\PublishProfiles\FolderProfile3.pubxml</_LastSelectedProfileId>
   </PropertyGroup>
   <ItemGroup>
     <Compile Update="AlamatPengiriman.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="CekHargaOngkir.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="CompleteUserData.xaml.cs">
@@ -43,6 +46,9 @@
   </ItemGroup>
   <ItemGroup>
     <Page Update="AlamatPengiriman.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="CekHargaOngkir.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="CompleteUserData.xaml">

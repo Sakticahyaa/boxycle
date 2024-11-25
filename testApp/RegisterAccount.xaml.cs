@@ -102,5 +102,10 @@ namespace testApp
                 MessageBox.Show("Error: " + ex.Message);
             }
         }
+
+        private void MailTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

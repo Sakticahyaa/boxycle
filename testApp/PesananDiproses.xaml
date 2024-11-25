@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:testApp"
         mc:Ignorable="d"
-        Title="PesananDiproses" Height="450" Width="800">
+        Title="PesananDiproses" Height="480" Width="800">
     <Grid>
         <Grid Background="#FFD9D9D9">
             <TextBlock HorizontalAlignment="Center" Margin="0,25,0,0" TextWrapping="Wrap" Text="Permintaan Anda Sedang Diproses" VerticalAlignment="Top" FontSize="36" Foreground="#FF377A7E" FontWeight="Bold"/>
@@ -13,7 +13,7 @@
                 <Border BorderBrush="Black" BorderThickness="1" Margin="33,27,33,27" Background="White" CornerRadius="20">
                     <Grid>
                         <Image Margin="15,42,227,42" Source="/PesananDiprosesIMG.png"/>
-                        <Border BorderBrush="Black" BorderThickness="1" Margin="308,110,43,109" CornerRadius="15" Background="#FF6DACB0">
+                        <Border BorderBrush="Black" BorderThickness="1" Margin="308,110,43,109" CornerRadius="15" Background="#FF6DACB0" VerticalAlignment="Center" HorizontalAlignment="Right" Width="163" Height="32">
                             <Button x:Name="BtnSignOut" Content="Sign Out" Background="{x:Null}" BorderBrush="{x:Null}" FontWeight="Bold" Click="BtnSignOut_Click"/>
                         </Border>
                     </Grid>

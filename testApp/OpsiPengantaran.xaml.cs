@@ -1,16 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Npgsql;
+using System;
+using System.Data;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace testApp
 {
@@ -19,14 +11,23 @@ namespace testApp
     /// </summary>
     public partial class OpsiPengantaran : Window
     {
+        public string _namaProduk;
+        public string _hargaProduk;
+        public string _deskripsiProduk;
+        public int _jumlahProduk;
+        public int _subTotal;
+        public BitmapImage _productImage;
+        public int _limbahId;
+        public int _sessionUserId; // Store session user ID
+
         public OpsiPengantaran()
         {
             InitializeComponent();
 
-            #if DEBUG
+#if DEBUG
             this.Width = 813;
             this.Height = 475;
-            #endif
+#endif
         }
 
         private void MovetoAnotherPage(Window newWindow)
@@ -46,5 +47,7 @@ namespace testApp
             AlamatPengiriman alamatPengirimanPage = new AlamatPengiriman();
             MovetoAnotherPage(alamatPengirimanPage);
         }
+
+ 
     }
 }

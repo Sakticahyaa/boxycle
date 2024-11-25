@@ -38,19 +38,19 @@ namespace testApp
         public DataTable dt;
         public static NpgsqlCommand cmd;
 
-        private void TBItem1_Loaded(object sender, RoutedEventArgs e)
+        public void TBHargaItem1_Loaded(object sender, RoutedEventArgs e)
         {
             try
             {
                 conn = new NpgsqlConnection(connstring);
                 conn.Open();
-                string sql = "SELECT \"namalimbah\" FROM public.\"limbah\" LIMIT 1";
+                string sql = "SELECT \"hargalimbah\" FROM public.\"limbah\" LIMIT 1";
                 cmd = new NpgsqlCommand(sql, conn);
                 var result = cmd.ExecuteScalar();
 
                 if (result != null)
                 {
-                    TBItem1.Text = result.ToString();
+                    TBHargaItem1.Text = result.ToString();
                 }
                 else
                 {
@@ -149,6 +149,35 @@ namespace testApp
             }
         }
 
+        private void TBItem1_Loaded(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                conn = new NpgsqlConnection(connstring);
+                conn.Open();
+                string sql = "SELECT \"namalimbah\" FROM public.\"limbah\" LIMIT 1";
+                cmd = new NpgsqlCommand(sql, conn);
+                var result = cmd.ExecuteScalar();
+
+                if (result != null)
+                {
+                    TBItem1.Text = result.ToString();
+                }
+                else
+                {
+                    MessageBox.Show("Data tidak ditemukan");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
         private void ImgItem1_Loaded(object sender, RoutedEventArgs e)
         {
             LoadImage(1, ImgItem1);
@@ -168,10 +197,11 @@ namespace testApp
             int limbahId = GetLimbahIdForClickedItem(sender);
             string namaProduk = TBItem1.Text;
             string deskripsi = GetProductDescription(1);
+            string harga = TBHargaItem1.Text;
             BitmapImage productImage = ImgItem1.Source as BitmapImage;
 
 
-            ItemDescription_Penjual itemDescriptionPenjualPage = new ItemDescription_Penjual(namaProduk, deskripsi, productImage, limbahId);
+            ItemDescription_Penjual itemDescriptionPenjualPage = new ItemDescription_Penjual(namaProduk, harga, deskripsi, productImage, limbahId);
             MovetoAnotherPage(itemDescriptionPenjualPage);
         }
     }

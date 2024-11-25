@@ -5,51 +5,64 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:testApp"
         mc:Ignorable="d"
-        Title="AlamatPengiriman" Height="450" Width="800">
+        Title="AlamatPengiriman" Height="480" Width="800">
     <Grid>
-        <Grid>
-            <Grid Background="#FF065C68" Height="69" VerticalAlignment="Top" HorizontalAlignment="Center" Width="800">
-                <Image x:Name="Bell" Margin="698,17,0,0" Source="/MdNotifications.png" HorizontalAlignment="Left" Width="31" Height="36" VerticalAlignment="Top"/>
-                <Image x:Name="Profile" Margin="746,16,0,0" Source="/Vector.png" RenderTransformOrigin="1.192,-3.215" HorizontalAlignment="Left" Width="37" Height="37" VerticalAlignment="Top"/>
-                <Image x:Name="Logo" Height="53" Margin="45,0,541,0" VerticalAlignment="Center" Source="/BOXYCLE.png"/>
-                <Image HorizontalAlignment="Left" Height="28" VerticalAlignment="Center" Width="28" Margin="7,0,0,0" Source="/Arrow left.png"/>
-                <Button x:Name="BackButton" Content="" HorizontalAlignment="Left" Margin="7,0,0,0" VerticalAlignment="Center"  Background="#00DDDDDD" BorderBrush="{x:Null}" Width="26" Height="26" Click="BackButton_Click"/>
-                <TextBlock x:Name="TB_Pengiriman" HorizontalAlignment="Left" Margin="458,0,0,0" TextWrapping="Wrap" Text="Pengiriman" VerticalAlignment="Center" Foreground="White" FontSize="30" FontWeight="Bold" Height="47" RenderTransformOrigin="0.501,0.367"/>
-            </Grid>
-            <Grid Margin="0,69,0,0" Background="#FFD9D9D9">
-                <Border BorderBrush="Black" BorderThickness="1" Margin="337,320,337,17" CornerRadius="10" Background="#FF065C68">
-                    <Button x:Name="BtnSimpanAlamat" Margin="-1,1,0,0" Background="{x:Null}" Foreground="{x:Null}" RenderTransformOrigin="0.517,1.137" BorderBrush="Transparent" Click="BtnSimpanAlamat_Click">
-                        <Label x:Name="LblSimpanAlamat" Content="Simpan Alamat" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" Width="84" Height="21" Padding="0,0,0,0"/>
-                    </Button>
-                </Border>
-                <Border x:Name="Border1" BorderBrush="Black" BorderThickness="1" Margin="66,45,66,65" CornerRadius="10" Background="White">
-                    <Grid Margin="0,0,-1,-1">
-                        <Border BorderBrush="Black" BorderThickness="1" Margin="207,40,34,0" CornerRadius="10" Height="25" VerticalAlignment="Top" Width="426">
-                            <TextBox x:Name="JalanTextBox" TextWrapping="Wrap" Background="Transparent" BorderBrush="Transparent" Margin="4,3,4,3" x:FieldModifier="public" />
-                        </Border>
-                        <TextBlock x:Name="TextBlockProvinsi" Margin="36,155,521,0" TextWrapping="Wrap" Text="Provinsi" FontSize="16" Foreground="#FF065C68" FontWeight="Bold" Height="21" VerticalAlignment="Top"/>
-                        <TextBlock x:Name="TextBlockKota" Margin="36,0,501,0" TextWrapping="Wrap" Text="Kabupaten/Kota" FontSize="16" Foreground="#FF065C68" FontWeight="Bold" Height="21" VerticalAlignment="Center"/>
-                        <Border BorderBrush="Black" BorderThickness="1" Margin="207,77,34,0" CornerRadius="10" Height="25" VerticalAlignment="Top">
-                            <TextBox x:Name="KecamatanTextBox" TextWrapping="Wrap" Background="Transparent" BorderBrush="Transparent" Margin="4,3,4,3" x:FieldModifier="public" />
-                        </Border>
-                        <Border BorderBrush="Black" BorderThickness="1" Margin="207,197,34,0" CornerRadius="10" Height="25" VerticalAlignment="Top">
-                            <TextBox x:Name="KodePosTextBox" TextWrapping="Wrap" Background="Transparent" BorderBrush="Transparent" Margin="4,3,4,3" x:FieldModifier="public"/>
-                        </Border>
-                        <TextBlock x:Name="TextBlockKecamatan" Margin="36,80,501,0" TextWrapping="Wrap" Text="Kecamatan" FontSize="16" Foreground="#FF065C68" FontWeight="Bold" Height="21" VerticalAlignment="Top"/>
-                        <TextBlock x:Name="TextBlockKodePos" Margin="36,201,501,0" TextWrapping="Wrap" Text="Kode Pos" FontSize="16" Foreground="#FF065C68" FontWeight="Bold" Height="21" VerticalAlignment="Top"/>
-                        <TextBlock x:Name="TextBlockJalan" Margin="36,42,522,0" TextWrapping="Wrap" Text="Jalan" FontSize="16" Foreground="#FF065C68" FontWeight="Bold" Height="21" VerticalAlignment="Top"/>
-                        <Border BorderBrush="Black" BorderThickness="1" Margin="207,0,34,0" CornerRadius="10" Height="25" VerticalAlignment="Center">
-                            <TextBox x:Name="KabupatenTextBox" TextWrapping="Wrap" Background="Transparent" BorderBrush="Transparent" Margin="4,3,4,3" x:FieldModifier="public"/>
-                        </Border>
-                        <Border BorderBrush="Black" BorderThickness="1" Margin="207,153,34,0" CornerRadius="10" Height="25" VerticalAlignment="Top">
-                            <TextBox x:Name="ProvinsiTextBox" TextWrapping="Wrap" Background="Transparent" BorderBrush="Transparent" Margin="4,3,4,3" x:FieldModifier="public"/>
-                        </Border>
-                    </Grid>
-                </Border>
-                <Label x:Name="LabelOpsiPengantaran" Content="Alamat Pengiriman / Pengambilan" Margin="25,6,482,325" FontSize="16" FontWeight="Bold" Foreground="#ff065c68"/>
-            </Grid>
-
+        <!-- Top Header Section -->
+        <Grid Background="#FF065C68" Height="69" VerticalAlignment="Top" HorizontalAlignment="Center" Width="800">
+            <Image x:Name="Bell" Source="/MdNotifications.png" HorizontalAlignment="Left" VerticalAlignment="Top" Width="31" Height="36" Margin="698,17,0,0"/>
+            <Image x:Name="Profile" Source="/Vector.png" HorizontalAlignment="Left" VerticalAlignment="Top" Width="37" Height="37" Margin="746,16,0,0"/>
+            <Image x:Name="Logo" Source="/BOXYCLE.png" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Height="53" Margin="40,10,0,0"/>
+            <Image Source="/Arrow left.png" HorizontalAlignment="Left" VerticalAlignment="Center" Width="28" Height="28" Margin="7,0,0,0"/>
+            <Button x:Name="BackButton" Content="" HorizontalAlignment="Left" VerticalAlignment="Center" Width="26" Height="26" Background="#00DDDDDD" BorderBrush="{x:Null}" Margin="7,0,0,0" Click="BackButton_Click"/>
+            <TextBlock x:Name="TB_Pengiriman" Text="Pengiriman" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,16,297,0" Foreground="White" FontSize="30" FontWeight="Bold"/>
         </Grid>
 
+        <!-- Content Section -->
+        <Grid Margin="0,69,0,0" Background="#FFD9D9D9">
+            <!-- Save Button -->
+            <Border BorderBrush="Black" BorderThickness="1" Width="150" Height="40" CornerRadius="10" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,20" Background="#FF065C68">
+                <Button Background="Transparent" Foreground="Transparent" BorderBrush="Transparent" Click="BtnSimpanAlamat_Click">
+                    <Label x:Name="LblSimpanAlamat" Content="Simpan Alamat" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
+                </Button>
+            </Border>
+
+            <!-- Input Form -->
+            <Border BorderBrush="Black" BorderThickness="1" CornerRadius="10" Width="610" Height="250" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,45,0,0" Background="White">
+                <Grid Margin="10">
+                    <!-- Jalan -->
+                    <TextBlock x:Name="TextBlockJalan" Text="Jalan" FontSize="16" FontWeight="Bold" Foreground="#FF065C68" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0"/>
+                    <Border BorderBrush="Black" BorderThickness="1" CornerRadius="10" Width="400" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="172,10,0,0">
+                        <TextBox x:Name="JalanTextBox" Background="Transparent" BorderBrush="Transparent" Margin="-1,3,-68,3"/>
+                    </Border>
+
+                    <!-- Kecamatan -->
+                    <TextBlock x:Name="TextBlockKecamatan" Text="Kecamatan" FontSize="16" FontWeight="Bold" Foreground="#FF065C68" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,50,0,0"/>
+                    <Border BorderBrush="Black" BorderThickness="1" CornerRadius="10" Width="400" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="172,50,0,0">
+                        <TextBox x:Name="KecamatanTextBox" Background="Transparent" BorderBrush="Transparent" Margin="4,3,4,3"/>
+                    </Border>
+
+                    <!-- Kabupaten -->
+                    <TextBlock x:Name="TextBlockKota" Text="Kabupaten/Kota" FontSize="16" FontWeight="Bold" Foreground="#FF065C68" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,90,0,0"/>
+                    <Border BorderBrush="Black" BorderThickness="1" CornerRadius="10" Width="400" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="172,90,0,0">
+                        <TextBox x:Name="KabupatenTextBox" Background="Transparent" BorderBrush="Transparent" Margin="4,3,4,3"/>
+                    </Border>
+
+                    <!-- Provinsi -->
+                    <TextBlock x:Name="TextBlockProvinsi" Text="Provinsi" FontSize="16" FontWeight="Bold" Foreground="#FF065C68" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,130,0,0"/>
+                    <Border BorderBrush="Black" BorderThickness="1" CornerRadius="10" Width="400" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="172,130,0,0">
+                        <TextBox x:Name="ProvinsiTextBox" Background="Transparent" BorderBrush="Transparent" Margin="4,3,4,3"/>
+                    </Border>
+
+                    <!-- Kode Pos -->
+                    <TextBlock x:Name="TextBlockKodePos" Text="Kode Pos" FontSize="16" FontWeight="Bold" Foreground="#FF065C68" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,170,0,0"/>
+                    <Border BorderBrush="Black" BorderThickness="1" CornerRadius="10" Width="400" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="172,170,0,0">
+                        <TextBox x:Name="KodePosTextBox" Background="Transparent" BorderBrush="Transparent" Margin="4,3,4,3"/>
+                    </Border>
+                </Grid>
+            </Border>
+
+            <!-- Section Label -->
+            <Label x:Name="LabelOpsiPengantaran" Content="Alamat Pengiriman / Pengambilan" FontSize="16" FontWeight="Bold" Foreground="#FF065C68" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,10,0,0"/>
+        </Grid>
     </Grid>
 </Window>

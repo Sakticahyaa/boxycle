@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:testApp"
         mc:Ignorable="d"
-        Title="MainProduct_Penjual" Height="450" Width="800">
+        Title="MainProduct_Penjual" Height="480" Width="800">
     <Grid>
-        <Grid Background="#FF6DACB0" Height="69" VerticalAlignment="Top" HorizontalAlignment="Center" Width="800">
+        <Grid Background="#FF6DACB0" Height="70" Width="800" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,0,0,0">
             <Image x:Name="Bell" Margin="698,17,0,0" Source="/MdNotifications.png" HorizontalAlignment="Left" Width="31" Height="36" VerticalAlignment="Top"/>
             <Image x:Name="Profile" Margin="746,16,0,0" Source="/Vector.png" RenderTransformOrigin="1.192,-3.215" HorizontalAlignment="Left" Width="37" Height="37" VerticalAlignment="Top"/>
             <Image x:Name="Logo" Height="53" Margin="19,0,567,0" VerticalAlignment="Center" Source="/BOXYCLE.png"/>
@@ -23,7 +23,11 @@
             </Border>
         </Grid>
         <Grid Margin="0,69,0,1" Background="#FFD9D9D9">
-            <Border CornerRadius="15" Background="#FF6DACB0" BorderBrush="#FF6DACB0" BorderThickness="1" Margin="23,308,0,0" HorizontalAlignment="Left" Width="762" Height="44" VerticalAlignment="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="27*"/>
+                <ColumnDefinition Width="53*"/>
+            </Grid.ColumnDefinitions>
+            <Border CornerRadius="15" Background="#FF6DACB0" BorderBrush="#FF6DACB0" BorderThickness="1" Margin="23,308,0,0" HorizontalAlignment="Left" Width="762" Height="44" VerticalAlignment="Top" Grid.ColumnSpan="2">
                 <Grid Margin="0,0,-1,-1">
                     <Button x:Name="BtnToShoppingCart" Background="Transparent" BorderBrush="#00707070"/>
                     <Image x:Name="ImgKeranjang" Height="25" Margin="686,0,50,9" VerticalAlignment="Bottom" Source="/Shopping cart.png" RenderTransformOrigin="0.573,0.549"/>
@@ -32,7 +36,7 @@
                 </Grid>
             </Border>
             <Button x:Name="PilihProduk" Content="Pilih Produk" HorizontalAlignment="Left" Margin="25,10,0,0" VerticalAlignment="Top" Background="{x:Null}" FontWeight="Bold" Foreground="#ff065c68" BorderThickness="0" FontSize="16"/>
-            <Border BorderBrush="Black" BorderThickness="0" Margin="46,45,578,99" CornerRadius="20" Background="White">
+            <Border BorderBrush="Black" BorderThickness="0" Margin="0,45,0,0" CornerRadius="20" Background="White" HorizontalAlignment="Center" VerticalAlignment="Top">
                 <Grid>
                     <Button x:Name="BtnItem1" Content="" HorizontalAlignment="Center" VerticalAlignment="Center" Background="Transparent" BorderBrush="#00707070" Width="176" Height="220" Click="BtnItem1_Click" x:FieldModifier="public"/>
                     <Image x:Name="ImgItem1" Height="142" Margin="17,17,17,0" VerticalAlignment="Top" Loaded="ImgItem1_Loaded"/>
@@ -40,6 +44,7 @@
                 </Grid>
             </Border>
         </Grid>
+        <TextBlock x:Name="TBHargaItem1" Margin="90,299,622,119" TextWrapping="Wrap" Text="TextBlock" FontStyle="Italic" Foreground="#FF065C68" TextAlignment="Center" Loaded="TBHargaItem1_Loaded" FontSize="10"/>
 
     </Grid>
 </Window>

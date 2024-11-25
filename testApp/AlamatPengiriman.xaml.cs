@@ -63,14 +63,15 @@ namespace testApp
                 conn = new NpgsqlConnection(connstring);
                 conn.Open();
 
-                // Update the "alamat" table with the shipping address
-                inputdata = "UPDATE public.\"alamat\" " +
-                    "SET \"jalan\" = @jalan, \"kabupaten_kota\" = @kabupaten, \"provinsi\" = @provinsi, \"kode_pos\" = @kodepos " +
-                    "WHERE \"userid\" = @userid";
+                inputdata = "INSERT INTO public.\"alamat\" (\"jalan\", \"kecamatan\", \"kabupaten_kota\", \"provinsi\", \"kode_pos\") " +
+                            "VALUES (@jalan, @kecamatan, @kabupaten, @provinsi, @kodepos)";
                 cmd = new NpgsqlCommand(inputdata, conn);
+
+
 
                 // Use parameters to prevent SQL injection
                 cmd.Parameters.AddWithValue("jalan", jalan);
+                cmd.Parameters.AddWithValue("kecamatan", kabupaten);
                 cmd.Parameters.AddWithValue("kabupaten", kabupaten);
                 cmd.Parameters.AddWithValue("provinsi", provinsi);
                 cmd.Parameters.AddWithValue("kodepos", kodepos);
@@ -83,8 +84,8 @@ namespace testApp
                     MessageBox.Show("Alamat Pengiriman Berhasil Tersimpan", "Success", MessageBoxButton.OK);
 
                     // Navigate to the next page, e.g., MainProduct
-                    MainProduct mainProductPage = new MainProduct();
-                    MovetoAnotherPage(mainProductPage);
+                    CekHargaOngkir cekhargaongkir = new CekHargaOngkir();
+                    MovetoAnotherPage(cekhargaongkir);
                 }
                 else
                 {
@@ -100,8 +101,7 @@ namespace testApp
                 conn.Close();
             }
 
-            PesananDiproses pesananDiprosesPage = new PesananDiproses();
-            MovetoAnotherPage(pesananDiprosesPage);
+
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)

@@ -31,7 +31,7 @@
                 <Grid Margin="0,0,-1,-1">
                     <Image x:Name="ImageProduk" Margin="27,11,575,9" OpacityMask="Black"/>
                     <TextBlock x:Name="TextBlockNamaProduk" Margin="118,34,236,30" TextWrapping="Wrap" Text="Nama Produk" FontSize="16" Foreground="#FF065C68" FontWeight="Bold"/>
-                    <TextBlock x:Name="TextBlockJumlahItem" Margin="578,35,28,34" TextWrapping="Wrap" Text="Jumlah Produk"/>
+                    <TextBlock x:Name="TextBlockJumlahItem" Margin="533,35,28,34" TextWrapping="Wrap" Text="Jumlah Produk"/>
                 </Grid>
             </Border>
             <Border CornerRadius="15" Background="#ff6DACB0" BorderBrush="#ff6DACB0" BorderThickness="1" Margin="23,308,0,0" HorizontalAlignment="Left" Width="762" Height="44" VerticalAlignment="Top">

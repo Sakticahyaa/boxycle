@@ -7,37 +7,66 @@
         mc:Ignorable="d"
         Title="CompleteUserData" Height="450" Width="800">
     <Grid>
-        <Grid Grid.Column="0" Background="#D9D9D9" Margin="0,0,480,0">
-            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center"/>
-            <Image x:Name="Logo" HorizontalAlignment="Right" Width="184" Source="/logo boxycle.png" Margin="0,99,68,144"/>
-            <Label x:Name="Moto" Content="     Reuse, Reduce, Rebox  &#xA;-  For a Greener Tomorrow -" Margin="81,314,81,77"/>
+        <!-- Left Panel -->
+        <Grid Background="#D9D9D9" Width="320" Margin="2,0,478,0">
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Image x:Name="Logo" Source="/logo boxycle.png" Width="184" Height="107" Margin="0,0,0,20"/>
+                <Label x:Name="Moto" Content="     Reuse, Reduce, Rebox  &#xA;-  For a Greener Tomorrow -" 
+                       FontSize="14" HorizontalContentAlignment="Center" VerticalAlignment="Center" Margin="0,20,0,0"/>
+            </StackPanel>
         </Grid>
+
+        <!-- Right Panel -->
         <Grid Background="#065C68" Margin="320,0,0,0">
             <Grid.RowDefinitions>
-                <RowDefinition Height="57*"/>
-                <RowDefinition Height="5*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <TextBlock Text="LENGKAPI DATA PENGGUNA" FontSize="30" FontWeight="Bold" Foreground="White" TextAlignment="Center" RenderTransformOrigin="0.502,-0.375" Margin="34,33,34,325"/>
-            <Border x:Name="Border" BorderBrush="Black" BorderThickness="1" Margin="164,356,164,10" CornerRadius="10" Background="#FFd9d9d9">
-                <Button x:Name="BtnSimpanDataPengguna" Margin="-1,0,-1,-1" Background="{x:Null}" Foreground="Black" RenderTransformOrigin="0.517,1.137" BorderBrush="Transparent" Click="BtnSimpanDataPengguna_Click">
-                    <TextBlock x:Name="TBSimpanDataPengguna" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Simpan Data Pengguna" VerticalAlignment="Top" TextAlignment="Center" Height="16" Width="152"/>
-                </Button>
-            </Border>
-            <Border BorderBrush="Black" BorderThickness="1" Margin="72,113,72,81" Background="#FFD9D9D9" CornerRadius="15">
-                <Grid Margin="0,0,-1,0">
-                    <TextBlock x:Name="TBSignIn" Text="DATA PENGGUNA" FontSize="20" FontWeight="Bold" Foreground="Black" TextAlignment="Center" Margin="15,19,15,0" RenderTransformOrigin="0.505,1.081" Height="28" VerticalAlignment="Top"/>
-                    <Label x:Name="LblNama" Content="Nama" Margin="38,66,246,0" Height="25" VerticalAlignment="Top"/>
-                    <Label x:Name="LblRole" Content="Role" Margin="38,150,231,0" Height="26" VerticalAlignment="Top"/>
-                    <Label x:Name="LblNoTelp" Content="Nomor Telepon" Margin="38,109,195,0" RenderTransformOrigin="0.488,0.22" Height="25" VerticalAlignment="Top"/>
-                    <Border BorderBrush="Black" BorderThickness="1" Margin="145,66,24,0" CornerRadius="10" Height="25" VerticalAlignment="Top">
-                        <TextBox x:Name="NamaTextBox" TextWrapping="Wrap" Background="Transparent" BorderBrush="Transparent" Margin="4,3,4,3"/>
+
+            <!-- Title -->
+            <TextBlock Text="LENGKAPI DATA PENGGUNA" FontSize="30" FontWeight="Bold" Foreground="White" 
+                       HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,20,0,0"/>
+
+            <!-- Form Section -->
+            <Border BorderBrush="Black" BorderThickness="1" Background="#FFD9D9D9" CornerRadius="15" 
+                    Width="400" Height="250" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,94,0,0">
+                <Grid Margin="10">
+                    <!-- Form Title -->
+                    <TextBlock x:Name="TBSignIn" Text="DATA PENGGUNA" FontSize="20" FontWeight="Bold" Foreground="Black" 
+                               HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0"/>
+
+                    <!-- Labels and Inputs -->
+                    <Label x:Name="LblNama" Content="Nama" HorizontalAlignment="Left" VerticalAlignment="Top" 
+                           Margin="10,50,0,0"/>
+                    <Border BorderBrush="Black" BorderThickness="1" CornerRadius="10" Width="200" Height="30" 
+                            HorizontalAlignment="Left" VerticalAlignment="Top" Margin="120,50,0,0">
+                        <TextBox x:Name="NamaTextBox" Background="Transparent" BorderBrush="Transparent" Margin="4,3,4,3"/>
                     </Border>
-                    <Border BorderBrush="Black" BorderThickness="1" Margin="145,109,24,0" CornerRadius="10" Height="25" VerticalAlignment="Top">
-                        <TextBox x:Name="NoTelpTextBox" TextWrapping="Wrap" Background="Transparent" BorderBrush="Transparent" Margin="4,3,4,3"/>
+
+                    <Label x:Name="LblNoTelp" Content="Nomor Telepon" HorizontalAlignment="Left" VerticalAlignment="Top" 
+                           Margin="10,90,0,0"/>
+                    <Border BorderBrush="Black" BorderThickness="1" CornerRadius="10" Width="200" Height="30" 
+                            HorizontalAlignment="Left" VerticalAlignment="Top" Margin="120,90,0,0">
+                        <TextBox x:Name="NoTelpTextBox" Background="Transparent" BorderBrush="Transparent" Margin="4,3,4,3"/>
                     </Border>
-                    <RadioButton x:Name="RbPembeli" Content="Pembeli" HorizontalAlignment="Left" Margin="156,156,0,0" VerticalAlignment="Top" GroupName="Roles"/>
-                    <RadioButton x:Name="RbPenjual" Content="Penjual" HorizontalAlignment="Left" Margin="241,156,0,0" VerticalAlignment="Top" GroupName="Roles"/>
+
+                    <Label x:Name="LblRole" Content="Role" HorizontalAlignment="Left" VerticalAlignment="Top" 
+                           Margin="10,130,0,0"/>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="120,130,0,0">
+                        <RadioButton x:Name="RbPembeli" Content="Pembeli" Margin="0,0,10,0" GroupName="Roles"/>
+                        <RadioButton x:Name="RbPenjual" Content="Penjual" GroupName="Roles"/>
+                    </StackPanel>
                 </Grid>
+            </Border>
+
+            <!-- Save Button -->
+            <Border Grid.Row="1" BorderBrush="Black" BorderThickness="1" Background="#FFd9d9d9" CornerRadius="10" 
+                    Width="150" Height="40" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,10,0,20">
+                <Button x:Name="BtnSimpanDataPengguna" Background="Transparent" BorderBrush="Transparent" 
+                        Click="BtnSimpanDataPengguna_Click">
+                    <TextBlock x:Name="TBSimpanDataPengguna" Text="Simpan Data Pengguna" FontSize="14" FontWeight="Bold" 
+                               Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </Button>
             </Border>
         </Grid>
     </Grid>

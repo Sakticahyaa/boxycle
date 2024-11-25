@@ -5,14 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:testApp"
         mc:Ignorable="d"
-        Title="ItemDescription" Height="450" Width="800">
+        Title="ItemDescription" Height="480" Width="800" HorizontalAlignment="Center" VerticalAlignment="Center">
     <Grid Margin="0,0,0,0">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0*"/>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="35*"/>
+            <ColumnDefinition Width="314*"/>
+            <ColumnDefinition Width="349*"/>
+            <ColumnDefinition Width="102*"/>
             <ColumnDefinition Width="0*"/>
         </Grid.ColumnDefinitions>
-        <Grid Background="#FF065C68" Grid.ColumnSpan="2" Height="69" VerticalAlignment="Top" HorizontalAlignment="Left" Width="800">
+        <Grid Background="#FF065C68" Grid.ColumnSpan="5" Height="69" VerticalAlignment="Top" HorizontalAlignment="Left" Width="800">
             <Image x:Name="Bell" Margin="698,17,0,0" Source="/MdNotifications.png" HorizontalAlignment="Left" Width="31" Height="36" VerticalAlignment="Top"/>
             <Image x:Name="Profile" Margin="746,16,0,0" Source="/Vector.png" RenderTransformOrigin="1.192,-3.215" HorizontalAlignment="Left" Width="37" Height="37" VerticalAlignment="Top"/>
             <Image HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="28" Margin="7,18,0,0" Source="/Arrow left.png"/>
@@ -28,7 +31,7 @@
                 </Grid>
             </Border>
         </Grid>
-        <Grid Margin="0,69,0,0" Background="#FFD9D9D9" Grid.ColumnSpan="2">
+        <Grid Margin="0,69,0,0" Background="#FFD9D9D9" Grid.ColumnSpan="5">
             <Border CornerRadius="15" BorderBrush="Black" BorderThickness="1" Margin="419,52,0,0" HorizontalAlignment="Left" Width="292" Height="180" VerticalAlignment="Top">
                 <Grid HorizontalAlignment="Left" Width="292" Height="164" VerticalAlignment="Center" Margin="-1,0,0,0">
                     <TextBlock x:Name="TextBlockNamaProduk" Margin="10,10,10,0" TextWrapping="Wrap" Text="Nama Produk" VerticalAlignment="Top" FontSize="20" Foreground ="#ff065c68" FontWeight="Bold" TextAlignment="Center"/>
@@ -59,18 +62,18 @@
             <Border BorderBrush="Black" BorderThickness="1" Margin="522,253,0,0" CornerRadius="15" Background="#ff065c68" HorizontalAlignment="Left" Width="86" Height="31" VerticalAlignment="Top">
                 <Button x:Name="BtnKeranjang" Content="+ Keranjang" Background="{x:Null}" BorderThickness="0" Foreground="White" Margin="-1,0,-1,-1" Click="BtnKeranjang_Click"/>
             </Border>
-            <Border CornerRadius="15" Background="#ff065c68" BorderBrush="#ff065c68" BorderThickness="1" Margin="23,308,15,12">
-                <Grid Margin="0,0,-1,-1">
-                    <Button x:Name="BtnToShoppingCart" Background="Transparent" BorderBrush="#00707070" Click="BtnToShoppingCart_Click" Margin="0,2,0,0"/>
-                    <Image x:Name="ImgNext" Source="/Icon.png" Margin="720,6,9,9"/>
-                    <Image x:Name="ImgKeranjang" Height="25" Margin="686,0,50,9" VerticalAlignment="Bottom" Source="/Shopping cart.png"/>
-                    <Label x:Name="LabelCheckOut" Content="Check Out" Background="{x:Null}" FontSize="20" FontWeight="Bold" Margin="10,2,0,5" Foreground="White" HorizontalAlignment="Left" Width="107"/>
+            <Border CornerRadius="15" Background="#ff065c68" BorderBrush="#ff065c68" BorderThickness="1" Margin="23,308,15,12" HorizontalAlignment="Left" VerticalAlignment="Bottom" Height="48">
+                <Grid Margin="0,0,-1,-1" HorizontalAlignment="Left" VerticalAlignment="Center">
+                    <Button x:Name="BtnToShoppingCart" Background="Transparent" BorderBrush="#00707070" Click="BtnToShoppingCart_Click" Margin="0,2,0,0" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+                    <Image x:Name="ImgNext" Source="/Icon.png" Margin="720,6,9,9" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                    <Image x:Name="ImgKeranjang" Height="25" Margin="686,0,50,9" Source="/Shopping cart.png" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                    <Label x:Name="LabelCheckOut" Content="Check Out" Background="{x:Null}" FontSize="20" FontWeight="Bold" Margin="10,2,0,5" Foreground="White" HorizontalAlignment="Left" Width="107" VerticalAlignment="Center"/>
                 </Grid>
             </Border>
             <Label Content="Detail Produk" HorizontalAlignment="Left" Margin="170,6,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Foreground="#ff065c68" Height="34"/>
             <Button x:Name="Mulai_Berbelanja" Content="Mulai Berbelanja >" HorizontalAlignment="Left" Margin="25,10,0,0" VerticalAlignment="Top" Background="{x:Null}" FontWeight="Bold" Foreground="#ff065c68" BorderThickness="0" FontSize="16" Click="Mulai_Berbelanja_Click"/>
         </Grid>
-        <Image x:Name="Logo" Height="53" Margin="45,8,541,0" VerticalAlignment="Top" Source="/BOXYCLE.png" Grid.ColumnSpan="2"/>
+        <Image x:Name="Logo" Height="53" Margin="10,8,0,0" VerticalAlignment="Top" Source="/BOXYCLE.png" HorizontalAlignment="Left" Grid.Column="2"/>
 
     </Grid>
 </Window>

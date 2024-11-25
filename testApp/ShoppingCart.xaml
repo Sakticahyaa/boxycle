@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:testApp"
         mc:Ignorable="d"
-        Title="ShoppingCart" Height="450" Width="800">
+        Title="ShoppingCart" Height="500" Width="820">
     <Grid>
         <Grid Background="#FF065C68" Height="69" VerticalAlignment="Top" HorizontalAlignment="Center" Width="800">
             <Image x:Name="Bell" Margin="698,17,71,16" Source="/MdNotifications.png"/>
@@ -29,13 +29,13 @@
             <Label x:Name="LabelKeranjang" Content="Keranjang" Margin="172,6,500,325" FontSize="16" FontWeight="Bold" Foreground="#ff065c68"/>
             <Border x:Name="BorderProduk1" BorderBrush="Black" BorderThickness="1" Margin="66,45,66,234" CornerRadius="10" Background="White" Loaded="BorderProduk1_Loaded">
                 <Grid Margin="0,0,-1,-1">
-                    <Image x:Name="ImageProduk" Margin="27,11,575,9" OpacityMask="Black" Source="/image 2.png"/>
+                    <Image x:Name="ImageProduk" Margin="10,10,575,9" OpacityMask="Black" Source="/image 2.png"/>
                     <TextBlock x:Name="TextBlockNamaProduk" Margin="121,25,233,39" TextWrapping="Wrap" Text="Nama Produk" FontSize="16" Foreground="#FF065C68" FontWeight="Bold"/>
                     <TextBlock x:Name="Rp" Margin="121,51,524,18" TextWrapping="Wrap" Text="Rp"/>
-                    <TextBlock x:Name="TextBlockHargaProduk" Margin="158,51,449,18" TextWrapping="Wrap" Text="Harga Produk"/>
-                    <TextBlock x:Name="TextBlockJumlahItem" Margin="456,35,150,34" TextWrapping="Wrap" Text="Jumlah Produk"/>
-                    <TextBlock x:Name="TextBlockSubtotal" Margin="578,36,32,33" TextWrapping="Wrap" Text="SubTotal Produk"/>
-                    <TextBlock x:Name="Rp_Copy" Margin="542,35,103,34" TextWrapping="Wrap" Text="Rp"/>
+                    <TextBlock x:Name="TextBlockHargaProduk" Margin="158,51,349,39" TextWrapping="Wrap" Text="Harga Produk"/>
+                    <TextBlock x:Name="TextBlockJumlahItem" Margin="358,35,150,34" TextWrapping="Wrap" Text="Jumlah Produk"/>
+                    <TextBlock x:Name="TextBlockSubtotal" Margin="505,36,10,57" TextWrapping="Wrap" Text="SubTotal Produk"/>
+                    <TextBlock x:Name="Rp_Copy" Margin="483,38,162,31" TextWrapping="Wrap" Text="Rp"/>
                 </Grid>
             </Border>
             <Border CornerRadius="15" Background="#ff065c68" BorderBrush="#ff065c68" BorderThickness="1" Margin="23,308,0,0" HorizontalAlignment="Left" Width="762" Height="44" VerticalAlignment="Top">
@@ -46,7 +46,7 @@
                     <Label x:Name="LabelCheckOut" Content="Check Out" Background="{x:Null}" FontSize="20" FontWeight="Bold" Margin="10,4,644,3" Foreground="White"/>
                 </Grid>
             </Border>
-            <TextBlock x:Name="BlmAdaBarang" Margin="262,175,254,174" TextWrapping="Wrap" Text="Belum Ada Barang yang Dimasukkan ke Keranjang" Loaded="BlmAdaBarang_Loaded"/>
+            <TextBlock x:Name="BlmAdaBarang" Margin="262,197,254,152" TextWrapping="Wrap" Text="Belum Ada Barang yang Dimasukkan ke Keranjang" Loaded="BlmAdaBarang_Loaded"/>
         </Grid>
     </Grid>
 </Window>

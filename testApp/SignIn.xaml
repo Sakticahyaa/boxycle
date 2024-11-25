@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:testApp"
         mc:Ignorable="d"
-        Title="SignIn" Height="450" Width="800">
+        Title="SignIn" Height="480" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="2*"/>
@@ -20,25 +20,25 @@
 
         <!-- Right Section -->
         <Grid Grid.Column="1" Background="#065C68">
-            <TextBlock Text="WELCOME TO BOXYCLE" FontSize="30" FontWeight="Bold" Foreground="White" TextAlignment="Center" RenderTransformOrigin="0.502,-0.375" Margin="66,60,66,332"/>
+            <TextBlock Text="WELCOME TO BOXYCLE" FontSize="30" FontWeight="Bold" Foreground="White" TextAlignment="Center" Margin="66,60,66,332"/>
             <Border BorderBrush="Black" BorderThickness="1" Margin="72,120,72,104" Background="#FFD9D9D9" CornerRadius="15">
-                <Grid Margin="0,0,-1,0">
-                    <TextBlock x:Name="TBSignIn" Text="SIGN IN" FontSize="20" FontWeight="Bold" Foreground="Black" TextAlignment="Center" Margin="15,25,15,154" RenderTransformOrigin="0.505,1.081"/>
-                    <Label x:Name="LblEmail" Content="Email" Margin="38,75,246,105"/>
-                    <Label x:Name="LblPassword" Content="Password" Margin="38,116,231,65"/>
-                    <TextBlock x:Name="TBDontHaveAcc" Text="Don't have an account?" Foreground="#6d6060" Margin="85,164,76,25"/>
-                    <Button x:Name="SignUp" Content="Sign Up" Margin="213,163,63,27" BorderThickness="0" Foreground="#FF065C68" Background="#FFDDDDDD" FontWeight="Bold" Click="SignUp_Click"/>
-                    <Border BorderBrush="Black" BorderThickness="1" Margin="116,73,24,108" CornerRadius="10">
+                <Grid Margin="0,0,0,0">
+                    <TextBlock x:Name="TBSignIn" Text="SIGN IN" FontSize="20" FontWeight="Bold" Foreground="Black" TextAlignment="Center" Margin="0,10,0,0"/>
+                    <Label x:Name="LblEmail" Content="Email" Margin="30,55,0,0" VerticalAlignment="Top"/>
+                    <Border BorderBrush="Black" BorderThickness="1" Width="200" Height="30" HorizontalAlignment="Left" Margin="115,55,0,0" VerticalAlignment="Top" CornerRadius="10">
                         <TextBox x:Name="MailTextBox" TextWrapping="Wrap" Background="Transparent" BorderBrush="Transparent" Margin="4,3,4,3"/>
                     </Border>
-                    <Border BorderBrush="Black" BorderThickness="1" Margin="116,116,24,65" CornerRadius="10">
+                    <Label x:Name="LblPassword" Content="Password" Margin="30,95,0,0" VerticalAlignment="Top"/>
+                    <Border BorderBrush="Black" BorderThickness="1" Width="200" Height="30" HorizontalAlignment="Left" Margin="115,95,0,0" VerticalAlignment="Top" CornerRadius="10">
                         <PasswordBox x:Name="PasswordTextBox" Margin="4,3,4,3" BorderBrush="{x:Null}" Background="{x:Null}"/>
                     </Border>
+                    <TextBlock x:Name="TBDontHaveAcc" Text="Don't have an account?" Foreground="#6d6060" Margin="50,140,0,0" VerticalAlignment="Top"/>
+                    <Button x:Name="SignUp" Content="Sign Up" Width="60" Height="25" Margin="180,136,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" BorderThickness="0" Foreground="#FF065C68" Background="#FFDDDDDD" FontWeight="Bold" Click="SignUp_Click"/>
                 </Grid>
             </Border>
-            <Border BorderBrush="Black" BorderThickness="1" Margin="184,360,184,44" CornerRadius="10" Background="#FFd9d9d9">
-                <Button Margin="-1,-1,-1,-1" Background="{x:Null}" Foreground="Black" RenderTransformOrigin="0.517,1.137" BorderBrush="Transparent" Click="Button_Click">
-                    <Label x:Name="LblSignUp" Content="Sign In" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="Black" Width="37" Height="21" Padding="0,0,0,0"/>
+            <Border BorderBrush="Black" BorderThickness="1" Width="200" Height="40" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,50" CornerRadius="10" Background="#FFd9d9d9">
+                <Button Background="Transparent" Foreground="Black" BorderBrush="Transparent" Click="Button_Click">
+                    <Label x:Name="LblSignUp" Content="Sign In" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="Black"/>
                 </Button>
             </Border>
         </Grid>

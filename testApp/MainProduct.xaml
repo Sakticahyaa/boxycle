@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:testApp"
         mc:Ignorable="d"
-        Title="MainProduct" Height="450" Width="800">
+        Title="MainProduct" Height="480" Width="800">
     <Grid>
         <Grid Background="#FF065C68" Height="69" VerticalAlignment="Top" HorizontalAlignment="Center" Width="800">
             <Image x:Name="Bell" Margin="698,17,0,0" Source="/MdNotifications.png" HorizontalAlignment="Left" Width="31" Height="36" VerticalAlignment="Top"/>

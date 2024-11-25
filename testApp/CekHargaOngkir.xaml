@@ -1,0 +1,56 @@
+﻿<Window x:Class="testApp.CekHargaOngkir"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:testApp"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        mc:Ignorable="d"
+        Title="CekHargaOngkir" Height="480" Width="800">
+    <Grid>
+        <Grid Background="#FF065C68" Height="69" VerticalAlignment="Top" HorizontalAlignment="Center" Width="800">
+            <Image x:Name="Bell" Margin="698,17,0,0" Source="/MdNotifications.png" HorizontalAlignment="Left" Width="31" Height="36" VerticalAlignment="Top"/>
+            <Image x:Name="Profile" Margin="746,16,0,0" Source="/Vector.png" RenderTransformOrigin="1.192,-3.215" HorizontalAlignment="Left" Width="37" Height="37" VerticalAlignment="Top"/>
+            <Image x:Name="Logo" Height="53" Margin="45,0,541,0" VerticalAlignment="Center" Source="/BOXYCLE.png"/>
+            <Image HorizontalAlignment="Left" Height="28" VerticalAlignment="Center" Width="28" Margin="7,0,0,0" Source="/Arrow left.png"/>
+            <Button x:Name="BackButton" Content="" HorizontalAlignment="Left" Margin="7,0,0,0" VerticalAlignment="Center"  Background="#00DDDDDD" BorderBrush="{x:Null}" Width="26" Height="26" Click="BackButton_Click"/>
+            <TextBlock x:Name="TB_Pengiriman" HorizontalAlignment="Left" Margin="458,0,0,0" TextWrapping="Wrap" Text="Pengiriman" VerticalAlignment="Center" Foreground="White" FontSize="30" FontWeight="Bold" Height="47" RenderTransformOrigin="0.501,0.367"/>
+        </Grid>
+        <Grid Margin="0,69,0,0" Background="#FFD9D9D9">
+            <Border BorderBrush="Black" BorderThickness="1" Margin="213,0,0,21" CornerRadius="10" Background="#FF065C68" HorizontalAlignment="Left" VerticalAlignment="Bottom" Height="58" Width="115">
+                <Button x:Name="BtnCekHarga" Margin="-1,1,0,0" Background="{x:Null}" Foreground="{x:Null}" RenderTransformOrigin="0.517,1.137" BorderBrush="Transparent" Click="BtnCekHarga_Click">
+                    <Label x:Name="LblSimpanAlamat" Content="Cek Ongkir" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" Width="62" Height="21" Padding="0,0,0,0"/>
+                </Button>
+            </Border>
+            <Border x:Name="Border1" BorderBrush="Black" BorderThickness="1" Margin="66,45,239,96" CornerRadius="10" Background="White">
+                <Grid Margin="0,0,0,-1" HorizontalAlignment="Left" Width="553">
+                    <TextBlock x:Name="TextBlockAsal" Margin="21,41,0,0" TextWrapping="Wrap" Text="Kota / Kabupaten Asal" FontSize="16" Foreground="#FF065C68" FontWeight="Bold" Height="21" VerticalAlignment="Top" HorizontalAlignment="Left" Width="178"/>
+                    <TextBlock x:Name="TextBlockTujuan" Margin="21,87,0,0" TextWrapping="Wrap" Text="Kota / Kabupaten Tujuan" FontSize="16" Foreground="#FF065C68" FontWeight="Bold" Height="21" VerticalAlignment="Top" HorizontalAlignment="Left" Width="192"/>
+                    <TextBlock x:Name="TextBlockKecamatan" Margin="21,132,0,0" TextWrapping="Wrap" Text="Berat (gram)" FontSize="16" Foreground="#FF065C68" FontWeight="Bold" Height="21" VerticalAlignment="Top" HorizontalAlignment="Left" Width="148"/>
+                    <Border BorderBrush="Black" BorderThickness="1" Margin="221,36,88,0" CornerRadius="10" Height="32" VerticalAlignment="Top">
+                        <TextBox x:Name="AsalTB" TextWrapping="Wrap" Text="" Margin="5,5,4,5" BorderBrush="{x:Null}"/>
+                    </Border>
+                    <Border BorderBrush="Black" BorderThickness="1" Margin="221,82,88,0" CornerRadius="10" Height="32" VerticalAlignment="Top">
+                        <TextBox x:Name="TujuanTB" TextWrapping="Wrap" Text="" Margin="5,5,4,5" BorderBrush="{x:Null}"/>
+                    </Border>
+                    <Border BorderBrush="Black" BorderThickness="1" Margin="221,127,88,0" CornerRadius="10" Height="32" VerticalAlignment="Top">
+                        <TextBox x:Name="BeratTB" TextWrapping="Wrap" Background="Transparent" BorderBrush="Transparent" Margin="4,3,4,3" x:FieldModifier="public"/>
+                    </Border>
+                    <TextBlock x:Name="TextBlockKecamatan_Copy" Margin="21,174,0,0" TextWrapping="Wrap" Text="Layanan / Kurir" FontSize="16" Foreground="#FF065C68" FontWeight="Bold" Height="21" VerticalAlignment="Top" HorizontalAlignment="Left" Width="148"/>
+                    <RadioButton x:Name="rbPOS" Content="POS" HorizontalAlignment="Left" Margin="232,177,0,0" VerticalAlignment="Top"/>
+                    <RadioButton x:Name="rbJNE" Content="JNE" HorizontalAlignment="Left" Margin="314,177,0,0" VerticalAlignment="Top"/>
+                    <RadioButton x:Name="rbTIKI" Content="TIKI" HorizontalAlignment="Left" Margin="388,177,0,0" VerticalAlignment="Top"/>
+                </Grid>
+            </Border>
+            <Label x:Name="LabelOpsiPengantaran" Content="Cek Harga Ongkir" Margin="25,6,482,325" FontSize="16" FontWeight="Bold" Foreground="#ff065c68"/>
+            <GroupBox Header="GroupBox" Margin="580,45,37,96"/>
+            <TextBlock x:Name="TextBlockLayanan" Text="Hasil layanan akan muncul di sini." TextWrapping="Wrap" Margin="590,66,47,117" />
+        </Grid>
+        <Border BorderBrush="Black" BorderThickness="1" Margin="375,0,0,20" CornerRadius="10" Background="#FF065C68" VerticalAlignment="Bottom" HorizontalAlignment="Left" Height="60" Width="108">
+            <Button x:Name="BtnSelanjutnya" Margin="-1,1,0,0" Background="{x:Null}" Foreground="{x:Null}" RenderTransformOrigin="0.517,1.137" BorderBrush="Transparent" Click="BtnSelanjutnya_Click">
+                <Label x:Name="LblSimpanAlamat1" Content="Selanjutnya" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" Width="62" Height="21" Padding="0,0,0,0"/>
+            </Button>
+        </Border>
+
+    </Grid>
+</Window>
